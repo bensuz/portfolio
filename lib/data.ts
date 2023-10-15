@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import moviebox from "@/public/MovieBoxTrailer.png";
+import wellnest from "@/public/wellnestpage.png";
+import lecker from "@/public/Leckerpage.png";
 
 export const links = [
     {
@@ -63,46 +63,79 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "MovieBox",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+            "MovieBox is a full CRUD web application that allows users to discover popular movies and watch trailers, search and filter the movies by keywords, and manage their favorite movies by creating a list.",
+        tags: [
+            "PostgreSQL",
+            "Express.js",
+            "React",
+            "Node.js",
+            "Javascript",
+            "Tailwind",
+            "REST APIs",
+            "Context API",
+        ],
+        imageUrl: moviebox,
+        src: "https://github.com/bensuz/MovieBox",
+        live: "https://moviebox-0lid.onrender.com/",
+        preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
     },
     {
-        title: "rmtDev",
+        title: "WellNest",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
+            "WellNest is a wellness website that users can practice guided meditation, track their mood and emotions by selecting colors and drawing pictures and keep private and public journals.",
+        tags: [
+            "MongoDb",
+            "Express.js",
+            "React",
+            "Node.js",
+            "Javascript",
+            "Tailwind",
+            "Context API",
+        ],
+        imageUrl: wellnest,
+        src: "https://github.com/PStleger/wellnest",
+        live: "https://wellnest-app.onrender.com/",
+        preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
     },
     {
-        title: "Word Analytics",
+        title: "Cookbook",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
+            "A recipe app where users can find variuos recipies from the Food API in details, add their favorite recipes to their lists and create their own recipes with headlessCMS. ",
+        tags: [
+            "MongoDb",
+            "Express.js",
+            "React",
+            "Node.js",
+            "Javascript",
+            "Tailwind",
+            "Contentful",
+            "REST API",
+        ],
+        imageUrl: lecker,
+        src: "https://github.com/bensuz/Cookbook",
+        live: "https://lecker-lecker.netlify.app/",
+        preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
     },
 ] as const;
 
 export const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
-    "PostgreSQL",
-    "Python",
-    "Django",
-    "Framer Motion",
+    { name: "HTML", icon: "" },
+    { name: "CSS", icon: "" },
+    { name: "JavaScript", icon: "" },
+    { name: "TypeScript", icon: "" },
+    { name: "React", icon: "" },
+    { name: "Next.js", icon: "" },
+    { name: "Node.js", icon: "" },
+    { name: "Express", icon: "" },
+    { name: "Tailwind", icon: "" },
+    { name: "Bootstrap", icon: "" },
+    { name: "MongoDB", icon: "" },
+    { name: "PostgreSQL", icon: "" },
+    { name: "Framer Motion", icon: "" },
+    { name: "Git", icon: "" },
+    { name: "Github", icon: "" },
+    { name: "Postman", icon: "" },
+    { name: "Figma", icon: "" },
 ] as const;

@@ -69,7 +69,8 @@ const Intro = () => {
             >
                 <Link
                     href="#contact"
-                    className="group bg-slate-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-500 active:scale-105 transition"
+                    title="contact"
+                    className="group bg-[#7756b3] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] hover:text-white active:scale-105 transition"
                 >
                     Contact me here
                     <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -77,24 +78,25 @@ const Intro = () => {
                 <a
                     href="/CV.pdf"
                     download
-                    className="group bg-slate-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-500 active:scale-105 transition"
+                    title="CV"
+                    className="group bg-[#7756b3] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d]  active:scale-105 transition"
                 >
                     Download CV{" "}
                     <HiDownload className="opacity-70 group-hover:translate-x-1 transition" />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/elif-bensu-zorlu/"
-                    className="bg-slate-600 p-4 text-white hover:text-white hover:bg-slate-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                    className="bg-[#7756b3] p-4 text-white hover:text-white hover:bg-[#604a8d]  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
                     target="_blank"
                 >
-                    <BsLinkedin />
+                    <BsLinkedin className="text-xl" />
                 </a>
                 <a
                     href="https://github.com/bensuz"
-                    className="bg-slate-600 p-4 text-white hover:text-white hover:bg-slate-500  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                    className="bg-[#7756b3] p-[0.9rem] text-white hover:text-white hover:bg-[#604a8d]   flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
                     target="_blank"
                 >
-                    <FaGithubSquare />
+                    <FaGithubSquare className="text-2xl" />
                 </a>
             </motion.div>
         </section>
