@@ -4,12 +4,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
+
 const About = () => {
-    // const { ref } = useSectionInView("About");
+    const { ref } = useSectionInView("About");
     return (
         <motion.section
-            // ref={ref}
-            className="mb-28 max-w-[49rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+            ref={ref}
+            className="mb-28 max-w-[50rem] text-justify leading-9 sm:mb-0 scroll-mt-28"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.175 }}
@@ -24,25 +26,25 @@ const About = () => {
             </p>{" "}
             <p className="mb-4">
                 Enrolling in the{" "}
-                <span className="font-semibold">
-                    WBS Coding School - Full Stack Web and App Development
-                    Bootcamp
+                <span className="font-bold">WBS Coding School - </span>
+                <span className="font-semibold text-[1.06rem]">
+                    Full Stack Web and App Development Bootcamp
                 </span>{" "}
                 accelerated my transition into coding. My core stack is{" "}
-                <span className="font-semibold">
+                <span className="font-semibold text-[1.06rem]">
                     React, Express.js, Node.js, and MongoDB.
                 </span>{" "}
             </p>
             <p className="mb-4">
                 My goal is to contribute to{" "}
-                <span className="font-semibold">innovative teams</span>,
-                creating web solutions that bridge technology with human needs
+                <span className="font-semibold text-[1.04rem]">
+                    innovative teams
+                </span>
+                , creating web solutions that bridge technology with human needs
                 that not only{" "}
-                <span className="font-semibold">
-                    efficiently solve problems
-                </span>{" "}
+                <span className="font-bold">efficiently solve problems</span>{" "}
                 but also make{" "}
-                <span className="font-semibold">
+                <span className="font-semibold text-[1.04rem]">
                     a lasting positive impact{" "}
                 </span>{" "}
                 on users .{" "}

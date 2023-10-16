@@ -1,7 +1,7 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+// import { CgWorkAlt } from "react-icons/cg";
+// import { FaReact } from "react-icons/fa";
+// import { LuGraduationCap } from "react-icons/lu";
 import moviebox from "@/public/MovieBoxTrailer.png";
 import wellnest from "@/public/wellnestpage.png";
 import lecker from "@/public/Leckerpage.png";
@@ -24,42 +24,42 @@ export const links = [
         hash: "#projects",
     },
 
-    {
-        name: "Experience",
-        hash: "#experience",
-    },
+    // {
+    //     name: "Experience",
+    //     hash: "#experience",
+    // },
     {
         name: "Contact",
         hash: "#contact",
     },
 ] as const;
 
-export const experiencesData = [
-    {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
-        description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: React.createElement(LuGraduationCap),
-        date: "2019",
-    },
-    {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
-        description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
-    },
-    {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
-        description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
-    },
-] as const;
+// export const experiencesData = [
+//     {
+//         title: "Graduated bootcamp",
+//         location: "Miami, FL",
+//         description:
+//             "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+//         icon: React.createElement(LuGraduationCap),
+//         date: "2019",
+//     },
+//     {
+//         title: "Front-End Developer",
+//         location: "Orlando, FL",
+//         description:
+//             "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+//         icon: React.createElement(CgWorkAlt),
+//         date: "2019 - 2021",
+//     },
+//     {
+//         title: "Full-Stack Developer",
+//         location: "Houston, TX",
+//         description:
+//             "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+//         icon: React.createElement(FaReact),
+//         date: "2021 - present",
+//     },
+// ] as const;
 
 export const projectsData = [
     {
@@ -121,21 +121,22 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-    { name: "HTML", icon: "" },
-    { name: "CSS", icon: "" },
-    { name: "JavaScript", icon: "" },
-    { name: "TypeScript", icon: "" },
-    { name: "React", icon: "" },
-    { name: "Next.js", icon: "" },
-    { name: "Node.js", icon: "" },
-    { name: "Express", icon: "" },
-    { name: "Tailwind", icon: "" },
-    { name: "Bootstrap", icon: "" },
-    { name: "MongoDB", icon: "" },
-    { name: "PostgreSQL", icon: "" },
-    { name: "Framer Motion", icon: "" },
-    { name: "Git", icon: "" },
-    { name: "Github", icon: "" },
-    { name: "Postman", icon: "" },
-    { name: "Figma", icon: "" },
+    { name: "HTML", icon: "/skillicons/html.png" },
+    { name: "CSS", icon: "/skillicons/css.png" },
+    { name: "JavaScript", icon: "/skillicons/js.png" },
+    { name: "TypeScript", icon: "/skillicons/ts.png" },
+    { name: "React", icon: "/skillicons/react.png" },
+    { name: "Next.js", icon: "/skillicons/nextjs.png" },
+    { name: "Node.js", icon: "/skillicons/nodejs.png" },
+    { name: "Express", icon: "/skillicons/expressjs.png" },
+    { name: "Tailwind", icon: "/skillicons/tailwind.png" },
+    { name: "Bootstrap", icon: "/skillicons/bootstrap.png" },
+    { name: "MongoDB", icon: "/skillicons/mongodb.png" },
+    { name: "PostgreSQL", icon: "/skillicons/postgresql.png" },
+    { name: "Framer Motion", icon: "/skillicons/framer.png" },
+    { name: "Git", icon: "/skillicons/git.png" },
+    { name: "Github", icon: "/skillicons/github.png" },
+    { name: "Postman", icon: "/skillicons/postman.png" },
+    { name: "Figma", icon: "/skillicons/figma.png" },
+    { name: "Jest", icon: "/skillicons/jest.png" },
 ] as const;

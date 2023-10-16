@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import Image from "next/image";
@@ -8,12 +9,15 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
+    const { ref } = useSectionInView("Home", 0.5);
     return (
         <section
+            ref={ref}
             id="home"
-            className="mb-25 max-w-[50rem] sm:mb-0 text-center scroll-mt-[100rem]"
+            className="mb-0 max-w-[50rem] sm:mb-0 text-center scroll-mt-[100rem]"
         >
             <div className="flex items-center justify-center ">
                 <div className="relative">
@@ -27,13 +31,13 @@ const Intro = () => {
                             alt="a photo of Bensu"
                             quality="95"
                             priority={true}
-                            className="rounded-full border-[0.35rem] border-white h-24 w-24 object-cover shadow-xl"
+                            className="rounded-full border-[0.35rem] border-white h-28 w-28 object-cover shadow-xl"
                         ></Image>
                     </motion.div>
                     <motion.span
                         className="text-4xl absolute bottom-0 right-0"
                         initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
+                        animate={{ scale: 1.2, opacity: 1 }}
                         transition={{
                             type: "spring",
                             stiffness: 125,

@@ -1,0 +1,29 @@
+/* CSS for flip effect */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 4rem;
+    height: 4rem;
+    transition: ease-in-out 0.2s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    transition: ease-in-out 0.2s;
+    transform-style: preserve-3d;
+}
