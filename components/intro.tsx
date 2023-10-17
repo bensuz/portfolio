@@ -10,9 +10,11 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const Intro = () => {
     const { ref } = useSectionInView("Home", 0.5);
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
     return (
         <section
             ref={ref}
@@ -75,6 +77,10 @@ const Intro = () => {
                     href="#contact"
                     title="contact"
                     className="group bg-[#7756b3] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] hover:text-white active:scale-105 transition"
+                    onClick={() => {
+                        setActiveSection("Contact");
+                        setTimeOfLastClick(Date.now());
+                    }}
                 >
                     Contact me here
                     <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -90,14 +96,14 @@ const Intro = () => {
                 </a>
                 <a
                     href="https://www.linkedin.com/in/elif-bensu-zorlu/"
-                    className="bg-[#7756b3] p-4 text-white hover:text-white hover:bg-[#604a8d]  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                    className="bg-[#7756b3] p-4 text-white hover:text-white hover:bg-[#604a8d]  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer "
                     target="_blank"
                 >
                     <BsLinkedin className="text-xl" />
                 </a>
                 <a
                     href="https://github.com/bensuz"
-                    className="bg-[#7756b3] p-[0.9rem] text-white hover:text-white hover:bg-[#604a8d]   flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                    className="bg-[#7756b3] p-[0.9rem] text-white hover:text-white hover:bg-[#604a8d]   flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  "
                     target="_blank"
                 >
                     <FaGithubSquare className="text-2xl" />

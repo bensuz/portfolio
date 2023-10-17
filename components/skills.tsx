@@ -22,7 +22,7 @@ const Skills = () => {
     return (
         <section ref={ref} id="skills" className="scroll-mt-32">
             <SectionHeading>My Skills</SectionHeading>
-            <ul className="flex flex-wrap max-w-[50rem] scroll-mt-28 items-center justify-center gap-8 ">
+            <ul className="flex flex-wrap max-w-[50rem]  scroll-mt-28 items-center justify-center gap-8 px-8 ">
                 {skillsData.map((skill, index) => (
                     <motion.li
                         variants={fadeInAnimationVariants}
