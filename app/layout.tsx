@@ -19,10 +19,10 @@ export default function RootLayout({
     return (
         <html lang="en" className="!scroll-smooth">
             <body
-                className={`${inter.className} bg-slate-100 text-slate-800 relative h-fit pt-28 sm:pt-36 `}
+                className={`${inter.className} bg-slate-100 text-slate-800 relative h-fit pt-28 sm:pt-36 w-full`}
             >
-                {/* <div className="bg-[#fbe2e4] absolute -z-10 top-[-6rem] right-[-11rem] h-[31.25rem] max-w-1/3 rounded-full blur-[10rem] sm:w-1/3"></div>
-                <div className="bg-[#dbd7fb] absolute -z-10 top-[-1rem] left-[-35rem] h-[31.25rem] max-w-1/3 rounded-full blur-[10rem] sm:w-1/3 md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div> */}
+                <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
+                <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] "></div>
                 <ActiveSectionContextProvider>
                     <Header />
                     {children} <Footer />
