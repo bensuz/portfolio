@@ -80,45 +80,45 @@ export const projectsData = [
         live: "https://moviebox-0lid.onrender.com/",
         preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
     },
-    // {
-    //     title: "WellNest",
-    //     description:
-    //         "WellNest is a wellness website that users can practice guided meditation, track their mood and emotions by selecting colors and drawing pictures and keep private and public journals.",
+    {
+        title: "WellNest",
+        description:
+            "WellNest is a wellness website that users can practice guided meditation, track their mood and emotions by selecting colors and drawing pictures and keep private and public journals.",
 
-    //     tags: [
-    //         { name: "MongoDb", icon: "/skillicons/mongodb.png" },
-    //         { name: "Express", icon: "/skillicons/expressjs.png" },
-    //         { name: "React", icon: "/skillicons/react.png" },
-    //         { name: "Node.js", icon: "/skillicons/nodejs.png" },
-    //         { name: "JavaScript", icon: "/skillicons/js.png" },
-    //         { name: "Tailwind", icon: "/skillicons/tailwind.png" },
-    //         { name: "REST APIs", icon: "/skillicons/restapi.png" },
-    //     ],
-    //     imageUrl: wellnest,
-    //     src: "https://github.com/PStleger/wellnest",
-    //     live: "https://wellnest-app.onrender.com/",
-    //     preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
-    // },
-    // {
-    //     title: "Cookbook",
-    //     description:
-    //         "A recipe app where users can find variuos recipies from the Food API in details, add their favorite recipes to their lists and create their own recipes with headlessCMS. ",
+        tags: [
+            { name: "MongoDb", icon: "/skillicons/mongodb.png" },
+            { name: "Express", icon: "/skillicons/expressjs.png" },
+            { name: "React", icon: "/skillicons/react.png" },
+            { name: "Node.js", icon: "/skillicons/nodejs.png" },
+            { name: "JavaScript", icon: "/skillicons/js.png" },
+            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
+            { name: "REST APIs", icon: "/skillicons/restapi.png" },
+        ],
+        imageUrl: wellnest,
+        src: "",
+        live: "",
+        preview: "",
+    },
+    {
+        title: "Cookbook",
+        description:
+            "A recipe app where users can find variuos recipies from the Food API in details, add their favorite recipes to their lists and create their own recipes with headlessCMS. ",
 
-    //     tags: [
-    //         { name: "MongoDb", icon: "/skillicons/mongodb.png" },
-    //         { name: "Express", icon: "/skillicons/expressjs.png" },
-    //         { name: "React", icon: "/skillicons/react.png" },
-    //         { name: "Node.js", icon: "/skillicons/nodejs.png" },
-    //         { name: "JavaScript", icon: "/skillicons/js.png" },
-    //         { name: "Tailwind", icon: "/skillicons/tailwind.png" },
-    //         { name: "REST APIs", icon: "/skillicons/restapi.png" },
-    //     ],
+        tags: [
+            { name: "MongoDb", icon: "/skillicons/mongodb.png" },
+            { name: "Express", icon: "/skillicons/expressjs.png" },
+            { name: "React", icon: "/skillicons/react.png" },
+            { name: "Node.js", icon: "/skillicons/nodejs.png" },
+            { name: "JavaScript", icon: "/skillicons/js.png" },
+            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
+            { name: "REST APIs", icon: "/skillicons/restapi.png" },
+        ],
 
-    //     imageUrl: lecker,
-    //     src: "https://github.com/bensuz/Cookbook",
-    //     live: "https://lecker-lecker.netlify.app/",
-    //     preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
-    // },
+        imageUrl: lecker,
+        src: "",
+        live: "",
+        preview: "",
+    },
 ] as const;
 
 export const skillsData = [

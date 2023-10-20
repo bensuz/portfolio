@@ -28,6 +28,9 @@ function Project({
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
     const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+    const hasSourceCode = !!src;
+    const hasLive = !!live;
+    const hasPreview = !!preview;
     return (
         <motion.div
             ref={ref}
@@ -43,7 +46,7 @@ function Project({
                     </p>
                     <ul className="flex flex-wrap mt-4 gap-2">
                         {tags.map((tag, index) => (
-                            <li key={index} className=""> 
+                            <li key={index} className="">
                                 <Image
                                     src={tag.icon}
                                     alt={`a photo of ${tag.name} logo`}
@@ -57,30 +60,40 @@ function Project({
                         ))}
                     </ul>
                     <div className="flex flex-wrap items-center justify-start lg:gap-3 mt-4">
-                        <Link
-                            href={src}
-                            target="_blank"
-                            className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
-                        >
-                            Source Code
-                            <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
-                        </Link>
-                        <Link
-                            href={live}
-                            target="_blank"
-                            className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
-                        >
-                            See Live
-                            <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
-                        </Link>
-                        <Link
-                            href={preview}
-                            target="_blank"
-                            className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
-                        >
-                            Preview
-                            <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
-                        </Link>
+                        {hasSourceCode ? (
+                            <Link
+                                href={src}
+                                target="_blank"
+                                className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+                            >
+                                Source Code
+                                <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
+                            </Link>
+                        ) : (
+                            <p className="text-[#7756b3] font-medium">
+                                Ongoing project, stay tuned for updates.
+                            </p>
+                        )}
+                        {hasLive && (
+                            <Link
+                                href={live}
+                                target="_blank"
+                                className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+                            >
+                                See Live
+                                <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
+                            </Link>
+                        )}
+                        {hasPreview && (
+                            <Link
+                                href={preview}
+                                target="_blank"
+                                className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+                            >
+                                Preview
+                                <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
+                            </Link>
+                        )}
                     </div>
                 </div>
                 <Image
