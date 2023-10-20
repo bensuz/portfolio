@@ -14,8 +14,8 @@ const Footer = () => {
                 Built with{" "}
                 <span className="font-medium text-sm">
                     React & Next.js (App Router & Server Actions), Typescript,
-                    Tailwind CSS, Framer Motion, React Email & resend, Vercel
-                    hosting
+                    Tailwind CSS, Framer Motion, React Email & Resend, Vercel
+                    Hosting
                 </span>
             </p>
         </footer>

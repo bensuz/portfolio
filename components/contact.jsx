@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -13,7 +13,13 @@ import "./contact.css";
 
 const Contact = () => {
     const { ref } = useSectionInView("Contact", 0.3);
+    const [senderEmail, setSenderEmail] = useState("");
+    const [message, setMessage] = useState("");
 
+    const formData = {
+        senderEmail,
+        message,
+    };
     return (
         <motion.section
             id="contact"
@@ -67,7 +73,8 @@ const Contact = () => {
                         });
                         return;
                     }
-
+                    setSenderEmail("");
+                    setMessage("");
                     Swal.fire({
                         title: "Your e-mail hass been sent successfully",
                         icon: "success",
@@ -97,14 +104,17 @@ const Contact = () => {
                     maxLength={500}
                     placeholder="Your email"
                     className="h-14 rounded-lg border border-black/10 p-4 w-full"
+                    value={senderEmail}
+                    onChange={(e) => setSenderEmail(e.target.value)}
                 />
                 <textarea
                     name="message"
                     placeholder="Your message"
                     required
                     maxLength={5000}
-                    id=""
                     className="h-52 rounded-lg border border-black/10 p-4 w-full active:border-purple-600"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
                 <SubmitBtn />
             </form>
