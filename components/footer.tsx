@@ -7,7 +7,7 @@ const Footer = () => {
                 {" "}
                 &copy; 2023 Elif Bensu Zorlu. All rights reserved.
             </small>
-            <p className="text-xs font-semibold">
+            <p className="text-sm font-semibold">
                 <span className="text-sm font-semibold">
                     About this website:
                 </span>{" "}

@@ -13,6 +13,7 @@ import "./contact.css";
 
 const Contact = () => {
     const { ref } = useSectionInView("Contact", 0.3);
+
     return (
         <motion.section
             id="contact"
