@@ -7,7 +7,7 @@ import Contact from "@/components/contact";
 
 export default function Home() {
     return (
-        <main className="flex flex-col justify-center items-center px-4 pt-20 gap-32 sm:gap-64 w-screen">
+        <main className="flex flex-col justify-center items-center px-4 pl-8 pt-20 gap-32 sm:gap-64 w-screen">
             <Intro />
             {/* <SectionDivider /> */}
             <About />
