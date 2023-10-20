@@ -62,11 +62,9 @@ const Intro = () => {
             <motion.p
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="pb-10"
+                className="pb-10 text-xl"
             >
-                Full-stack developer by day and a violin enthusiast by night, I
-                craft beautiful code and weaving melodies with equal passion,
-                because for me, both are art forms.
+                Front-End oriented Full-Stack Developer.
             </motion.p>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
