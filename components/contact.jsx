@@ -103,7 +103,7 @@ const Contact = () => {
                     required
                     maxLength={500}
                     placeholder="Your email"
-                    className="h-14 rounded-lg border border-black/10 p-4 w-full dark:bg-gray-3  b 00 "
+                    className="h-14 rounded-lg border border-black/10 p-4 w-full dark:bg-gray-300 "
                     value={senderEmail}
                     onChange={(e) => setSenderEmail(e.target.value)}
                 />
