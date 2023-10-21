@@ -21,7 +21,7 @@ const ThemeSwitch = () => {
             {theme === "light" ? (
                 <BsMoon className="text-blue-700 font-extrabold text-2xl dark:text-blue-300" />
             ) : (
-                <BsSun className="text-yellow-500 font-extrabold text-2xl dark:text-yellow-300" />
+                <BsSun className="text-yellow-600 font-extrabold text-2xl dark:text-yellow-300" />
             )}
         </motion.button>
     );
