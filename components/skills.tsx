@@ -44,19 +44,16 @@ const Skills = () => {
                                         priority={true}
                                         width={100}
                                         height={100}
-                                        className="rounded-2xl border-[0.1rem] border-gray-200 h-16 w-16 object-cover shadow-md shadow-slate-700 p-2"
+                                        className="rounded-2xl border-[0.1rem] border-gray-200 h-16 w-16 object-cover shadow-md shadow-slate-700 p-2 dark:bg-white/80"
                                     />
                                 </div>
                                 <div className="flip-card-back">
-                                    <div className="rounded-2xl text-slate-600 text-[0.6rem] font-semibold p-4 flex items-center justify-center flex-wrap border-[0.1rem] border-gray-200 h-14 w-14 object-cover shadow-md shadow-slate-700 cursor-default">
+                                    <div className="rounded-2xl text-slate-600 text-[0.6rem] font-semibold p-4 flex items-center justify-center flex-wrap border-[0.1rem] border-gray-200 h-14 w-14 object-cover shadow-md shadow-slate-700 cursor-default dark:text-white/80 dark:border-white/50 ">
                                         {skill.name}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {/* <p className="text-sm  flex flex-wrap text-center text-slate-500">
-                            {skill.name}
-                        </p> */}
                     </motion.li>
                 ))}
             </ul>

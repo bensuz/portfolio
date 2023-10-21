@@ -13,7 +13,7 @@ export default function SubmitBtn() {
     return (
         <button
             type="submit"
-            className="mt-10 group/button bg-[#7756b3] text-white text-md px-6 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+            className="mt-10 group/button bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] text-white text-md px-6 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
             disabled={pending}
         >
             {pending ? (

@@ -39,7 +39,7 @@ const Contact = () => {
             }}
         >
             <SectionHeading>Contact Me</SectionHeading>
-            <p className="text-slate-700">
+            <p className="text-slate-700 dark:text-white/80">
                 Please contact me directly at{" "}
                 <a className="underline" href="mailto:elifbensuaslan@gmail.com">
                     elifbensuaslan@gmail.com
@@ -103,7 +103,7 @@ const Contact = () => {
                     required
                     maxLength={500}
                     placeholder="Your email"
-                    className="h-14 rounded-lg border border-black/10 p-4 w-full"
+                    className="h-14 rounded-lg border border-black/10 p-4 w-full dark:bg-gray-3  b 00 "
                     value={senderEmail}
                     onChange={(e) => setSenderEmail(e.target.value)}
                 />
@@ -112,7 +112,7 @@ const Contact = () => {
                     placeholder="Your message"
                     required
                     maxLength={5000}
-                    className="h-52 rounded-lg border border-black/10 p-4 w-full active:border-purple-600"
+                    className="h-52 rounded-lg border border-black/10 p-4 w-full active:border-purple-600 dark:bg-gray-300"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 ></textarea>

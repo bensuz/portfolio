@@ -38,15 +38,15 @@ function Project({
             className="group/card mb-3 sm:mb-8 last:mb-0"
         >
             {" "}
-            <section className="relative  bg-slate-200/40 max-w-[58rem] border border-gray-500/5 rounded-lg overflow-hidden sm:pr-8 sm:h-[24rem] shadow-md shadow-slate-500 hover:bg-purple-100/50 group-even/card:pl-8 ">
+            <section className="relative  bg-slate-200/40 max-w-[58rem] border border-gray-500/5 rounded-lg overflow-hidden sm:pr-8 sm:h-[24rem] shadow-md shadow-slate-500 hover:bg-purple-100/50 group-even/card:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-gray-700">
                 <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 max-sm:min-w-full max-md:border max-md:mr-8 sm:max-w-[50%] max-sm:max-w-[50%] flex flex-col justify-start items-start h-full sm:mt-auto sm:group-even/card:ml-[27rem] sm:group-even/card:w-full sm:group-even/card:px-0">
                     <h3 className="text-2xl font-semibold">{title}</h3>
-                    <p className="mt-2 leading-relaxed text-slate-800">
+                    <p className="mt-2 leading-relaxed text-slate-800 dark:text-white/80">
                         {description}
                     </p>
                     <ul className="flex flex-wrap mt-4 gap-2">
                         {tags.map((tag, index) => (
-                            <li key={index} className="">
+                            <li key={index} className="dark:shadow-outline">
                                 <Image
                                     src={tag.icon}
                                     alt={`a photo of ${tag.name} logo`}
@@ -54,7 +54,7 @@ function Project({
                                     priority={true}
                                     width={100}
                                     height={100}
-                                    className="rounded-full h-[2.2rem] w-[2.2rem]  "
+                                    className="rounded-full h-[2.5rem] w-[2.5rem] dark:bg-white dark:p-1 mb-6 "
                                 />
                             </li>
                         ))}
@@ -64,13 +64,13 @@ function Project({
                             <Link
                                 href={src}
                                 target="_blank"
-                                className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+                                className="mt-2 group/button bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
                             >
                                 Source Code
                                 <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
                             </Link>
                         ) : (
-                            <p className="text-[#7756b3] font-medium">
+                            <p className="text-[#7756b3] font-medium dark:text-[#b598ec]">
                                 Ongoing project, stay tuned for updates.
                             </p>
                         )}
@@ -78,7 +78,7 @@ function Project({
                             <Link
                                 href={live}
                                 target="_blank"
-                                className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+                                className="mt-2 group/button bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
                             >
                                 See Live
                                 <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
@@ -88,7 +88,7 @@ function Project({
                             <Link
                                 href={preview}
                                 target="_blank"
-                                className="mt-2 group/button bg-[#7756b3] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
+                                className="mt-2 group/button bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] text-white text-sm px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] active:scale-105 transition"
                             >
                                 Preview
                                 <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
