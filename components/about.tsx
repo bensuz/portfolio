@@ -11,7 +11,7 @@ const About = () => {
     return (
         <motion.section
             ref={ref}
-            className=" max-w-[50rem] text-justify leading-9 sm:mb-0 scroll-mt-28"
+            className=" max-w-[50rem] text-justify leading-9 sm:mb-0 scroll-mt-28 text-[1rem]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.175 }}
