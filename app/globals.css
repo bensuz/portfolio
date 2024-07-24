@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    --line-color: #e5e7eb;
+}
+
+html.dark {
+    --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+    @apply border border-black/10;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+    width: 36px;
+    height: 36px;
+    color: #7756b3;
+    margin-top: 6px;
+    box-shadow: 0 0 0 2px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+        0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+@media (min-width: 1170px) {
+    .vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+        margin-left: -20px;
+        margin-top: 15px;
+    }
+}

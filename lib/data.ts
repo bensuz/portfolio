@@ -1,10 +1,10 @@
 import React from "react";
-// import { CgWorkAlt } from "react-icons/cg";
-// import { FaReact } from "react-icons/fa";
-// import { LuGraduationCap } from "react-icons/lu";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
 import moviebox from "@/public/MovieBoxTrailer.png";
 import wellnest from "@/public/wellnestpage.png";
-import lecker from "@/public/Leckerpage.png";
+import fuelmate from "@/public/fuelmate-narrow.png";
 
 export const links = [
     {
@@ -16,6 +16,10 @@ export const links = [
         hash: "#about",
     },
     {
+        name: "Experience",
+        hash: "#experience",
+    },
+    {
         name: "Skills",
         hash: "#skills",
     },
@@ -24,44 +28,55 @@ export const links = [
         hash: "#projects",
     },
 
-    // {
-    //     name: "Experience",
-    //     hash: "#experience",
-    // },
     {
         name: "Contact",
         hash: "#contact",
     },
 ] as const;
 
-// export const experiencesData = [
-//     {
-//         title: "Graduated bootcamp",
-//         location: "Miami, FL",
-//         description:
-//             "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-//         icon: React.createElement(LuGraduationCap),
-//         date: "2019",
-//     },
-//     {
-//         title: "Front-End Developer",
-//         location: "Orlando, FL",
-//         description:
-//             "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-//         icon: React.createElement(CgWorkAlt),
-//         date: "2019 - 2021",
-//     },
-//     {
-//         title: "Full-Stack Developer",
-//         location: "Houston, TX",
-//         description:
-//             "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-//         icon: React.createElement(FaReact),
-//         date: "2021 - present",
-//     },
-// ] as const;
+export const experiencesData = [
+    {
+        title: "Graduated from bootcamp",
+        location: "WBS Coding School",
+        description:
+            "I graduated from bootcamp after 6 months of study, with a strong foundation in both front-end and back-end development.",
+        icon: React.createElement(LuGraduationCap),
+        date: "Sept 2023",
+    },
+    {
+        title: "Junior Full Stack Developer",
+        location: "Rix Digital - J.R Rix & Sons",
+        description:
+            "I'm working as a full stack developer at Rix Digital. Responsible for developing various Webflow, React/Node, Remix projects for the internal and external steakholders as well as maintaining/updating the existing websites.",
+        icon: React.createElement(CgWorkAlt),
+        date: "Dec 2023 - Present",
+    },
+] as const;
 
 export const projectsData = [
+    {
+        title: "Fuelmate",
+        description:
+            "Full-featured website providing dynamic fuel card solutions for businesses. Features an advanced CMS, custom-built card filtering tools, live Jivo chat, JotForm integration, TrustPilot widgets and user-friendly animations. ",
+
+        tags: [
+            { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
+            { name: "Javascript", icon: "/skillicons/js.png" },
+            { name: "CSS", icon: "/skillicons/css.png" },
+            { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
+            {
+                name: "Trustpilot Widget",
+                icon: "/skillicons/trustpilot_logo.png",
+            },
+            { name: "JivoChat", icon: "/skillicons/jivo.png" },
+            { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
+        ],
+
+        imageUrl: fuelmate,
+        src: "",
+        live: "https://www.fuelmate.co.uk/",
+        preview: "",
+    },
     {
         title: "MovieBox",
         description:
@@ -99,26 +114,6 @@ export const projectsData = [
         live: "",
         preview: "",
     },
-    {
-        title: "Cookbook",
-        description:
-            "A recipe app where users can find variuos recipies from the Food API in details, add their favorite recipes to their lists and create their own recipes with headlessCMS. ",
-
-        tags: [
-            { name: "MongoDb", icon: "/skillicons/mongodb.png" },
-            { name: "Express", icon: "/skillicons/expressjs.png" },
-            { name: "React", icon: "/skillicons/react.png" },
-            { name: "Node.js", icon: "/skillicons/nodejs.png" },
-            { name: "JavaScript", icon: "/skillicons/js.png" },
-            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
-            { name: "REST APIs", icon: "/skillicons/restapi.png" },
-        ],
-
-        imageUrl: lecker,
-        src: "",
-        live: "",
-        preview: "",
-    },
 ] as const;
 
 export const skillsData = [
@@ -130,6 +125,7 @@ export const skillsData = [
     { name: "Next.js", icon: "/skillicons/nextjs.png" },
     { name: "Node.js", icon: "/skillicons/nodejs.png" },
     { name: "Express", icon: "/skillicons/expressjs.png" },
+    { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
     { name: "Tailwind", icon: "/skillicons/tailwind.png" },
     { name: "Bootstrap", icon: "/skillicons/bootstrap.png" },
     { name: "MongoDB", icon: "/skillicons/mongodb.png" },

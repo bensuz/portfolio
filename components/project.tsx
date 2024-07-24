@@ -46,7 +46,11 @@ function Project({
                     </p>
                     <ul className="flex flex-wrap mt-4 gap-2">
                         {tags.map((tag, index) => (
-                            <li key={index} className="dark:shadow-outline">
+                            <li
+                                key={index}
+                                className="dark:shadow-outline"
+                                title={tag.name}
+                            >
                                 <Image
                                     src={tag.icon}
                                     alt={`a photo of ${tag.name} logo`}
@@ -60,7 +64,7 @@ function Project({
                         ))}
                     </ul>
                     <div className="flex flex-wrap items-center justify-start lg:gap-3 mt-4">
-                        {hasSourceCode ? (
+                        {title === "Fuelmate" ? null : hasSourceCode ? (
                             <Link
                                 href={src}
                                 target="_blank"
@@ -74,6 +78,7 @@ function Project({
                                 Ongoing project, stay tuned for updates.
                             </p>
                         )}
+
                         {hasLive && (
                             <Link
                                 href={live}
