@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import moviebox from "@/public/MovieBoxTrailer.png";
-import wellnest from "@/public/wellnestpage.png";
+import bryn from "@/public/bryn-morfydd.png";
 import fuelmate from "@/public/fuelmate-narrow.png";
 
 export const links = [
@@ -78,6 +78,22 @@ export const projectsData = [
         preview: "",
     },
     {
+        title: "Bryn Morfydd Lodge Park",
+        description:
+            "A sleek and responsive website for a luxury lodge park in North Wales. Includes a fully integrated, custom-built park management system that enables dynamic updates for lodge and park details.",
+
+        tags: [
+            { name: "Nunjucks", icon: "/skillicons/nj.png" },
+            { name: "Koa", icon: "/skillicons/koa.png" },
+            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
+            { name: "Alpine.js", icon: "/skillicons/alpine.png" },
+        ],
+        imageUrl: bryn,
+        src: "",
+        live: "https://brynmorfydd.com/",
+        preview: "",
+    },
+    {
         title: "MovieBox",
         description:
             "MovieBox is a full CRUD web application that allows users to discover popular movies and watch trailers, search and filter the movies by keywords, and manage their favorite movies by creating a list.",
@@ -94,25 +110,6 @@ export const projectsData = [
         src: "https://github.com/bensuz/MovieBox",
         live: "https://moviebox-0lid.onrender.com/",
         preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
-    },
-    {
-        title: "WellNest",
-        description:
-            "WellNest is a wellness website that users can practice guided meditation, track their mood and emotions by selecting colors and drawing pictures and keep private and public journals.",
-
-        tags: [
-            { name: "MongoDb", icon: "/skillicons/mongodb.png" },
-            { name: "Express", icon: "/skillicons/expressjs.png" },
-            { name: "React", icon: "/skillicons/react.png" },
-            { name: "Node.js", icon: "/skillicons/nodejs.png" },
-            { name: "JavaScript", icon: "/skillicons/js.png" },
-            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
-            { name: "REST APIs", icon: "/skillicons/restapi.png" },
-        ],
-        imageUrl: wellnest,
-        src: "",
-        live: "",
-        preview: "",
     },
 ] as const;
 

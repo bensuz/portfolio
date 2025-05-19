@@ -64,7 +64,9 @@ function Project({
                         ))}
                     </ul>
                     <div className="flex flex-wrap items-center justify-start lg:gap-3 mt-4">
-                        {title === "Fuelmate" ? null : hasSourceCode ? (
+                        {title === "Fuelmate" ||
+                        title ===
+                            "Bryn Morfydd Lodge Park" ? null : hasSourceCode ? (
                             <Link
                                 href={src}
                                 target="_blank"
