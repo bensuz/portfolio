@@ -23,67 +23,58 @@ const About = () => {
             <p className="mb-4">
                 I began my career in the Aerospace and Defence industry, where I
                 spent around four years working with contracts, licensing and
-                regulated processes. This gave me a strong foundation in{" "}
+                regulated processes. This provided a strong foundation in{" "}
                 <span className="font-semibold text-[1.06rem]">
-                    accuracy, documentation, stakeholder communication,
+                    accuracy, documentation, stakeholder communication and
                     confidentiality
-                </span>{" "}
-                and working responsibly in environments where security and
-                compliance matter.
+                </span>
+                , and it shaped my approach to secure delivery in highly
+                regulated environments.
             </p>
 
             <p className="mb-4">
-                I later transitioned into software development after completing
-                the <span className="font-bold">WBS Coding School</span>{" "}
+                I transitioned into software development after completing the
+                <span className="font-bold"> WBS Coding School</span>{" "}
                 <span className="font-semibold text-[1.06rem]">
                     Full Stack Web and App Development Bootcamp
                 </span>
-                , where I built a foundation in{" "}
-                <span className="font-semibold text-[1.06rem]">
-                    frontend development, backend development, databases, REST
-                    APIs and project-based delivery.
-                </span>
+                , where I built a practical foundation in frontend, backend,
+                databases, REST APIs and project-based delivery.
             </p>
 
             <p className="mb-4">
-                I now work as a{" "}
-                <span className="font-semibold text-[1.06rem]">
+                I currently work as a <span className="font-semibold text-[1.06rem]">
                     Full Stack Developer at Rix Digital
                 </span>
                 , supporting production websites and internal digital projects
-                across multiple subsidiary companies. I work with a diverse
-                technology stack including{" "}
-                <span className="font-semibold text-[1.06rem]">
-                    Webflow, Node.js, Koa, React, Remix, SvelteKit, Nunjucks,
-                    Alpine.js, Tailwind CSS and JavaScript/TypeScript.
-                </span>{" "}
-                My work includes responsive interfaces, reusable components,
-                backend routes, secure form workflows, API integration planning,
-                accessibility, performance improvements and support for live
-                services.
+                across multiple subsidiary companies. My responsibilities include
+                responsive interfaces, reusable components, backend routes,
+                secure form workflows, API integration planning, accessibility
+                improvements, performance optimisation and live-service support.
             </p>
 
             <p className="mb-4">
-                I enjoy working across the full development lifecycle, from
-                understanding user and stakeholder needs through to building,
-                testing, improving and supporting digital products. I’m
-                especially interested in{" "}
-                <span className="font-semibold text-[1.06rem]">
-                    secure, accessible and maintainable digital services
-                </span>{" "}
-                that solve real problems and protect user data.
+                I combine technical delivery with strong stakeholder collaboration,
+                documentation and compliance focus. My work is centred on
+                building secure, accessible and maintainable digital services that
+                meet real business needs.
             </p>
 
+            <div className="mb-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-950/40">
+                <h3 className="mb-3 text-lg font-semibold">Government-ready strengths</h3>
+                <ul className="list-disc list-inside space-y-2 text-[1rem] leading-7 text-slate-700 dark:text-slate-200">
+                    <li>Delivering secure form workflows and compliant digital services</li>
+                    <li>Improving accessibility, performance and maintainability for live systems</li>
+                    <li>Collaborating with stakeholders on requirements, governance and documentation</li>
+                    <li>Applying disciplined development practices in regulated and production environments</li>
+                </ul>
+            </div>
+
             <p className="mb-4">
-                I’m also experienced in using{" "}
-                <span className="font-semibold text-[1.06rem]">
-                    AI-assisted development tools such as Codex and Claude
-                </span>{" "}
-                to support software delivery responsibly with custom agents and skills. I use them for code
-                exploration, debugging, refactoring, test planning,
-                documentation, UI iteration and structured code reviews, while
-                keeping ownership of technical decisions, security, accuracy and
-                final implementation.
+                I also use AI-assisted development tools responsibly to support
+                code exploration, debugging, refactoring, documentation and review,
+                while retaining ownership of technical decisions, quality and
+                delivery.
             </p>
         </motion.section>
     );

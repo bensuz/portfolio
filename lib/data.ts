@@ -54,11 +54,16 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "Victory Conversions", // new
+        title: "Victory Conversions",
+        role: "Full Stack Developer",
         description:
-            // new
-            "A production website for a public-sector and commercial vehicle conversion company, focused on reusable templates, responsive layouts, accessibility, SEO, performance and clear contact journeys.",
-            tags: [
+            "A public-sector and commercial vehicle conversion website rebuilt for reusable service templates, accessible content and performance-optimised pages.",
+        highlights: [
+            "Delivered reusable templates for service and sector pages",
+            "Improved accessibility, SEO and cross-device performance",
+            "Built clear contact journeys to support stakeholder-led lead generation",
+        ],
+        tags: [
             { name: "Nunjucks", icon: "/skillicons/nj.png" },
             { name: "Koa", icon: "/skillicons/koa.png" },
             { name: "Tailwind", icon: "/skillicons/tailwind.png" },
@@ -74,9 +79,14 @@ export const projectsData = [
     },
     {
         title: "Bryn Morfydd Lodge Park",
+        role: "Full-stack developer",
         description:
-            "A sleek and responsive website for a luxury lodge park in North Wales. Includes a fully integrated, custom-built park management system that enables dynamic updates for lodge and park details.",
-
+            "A luxury lodge park website with a custom park management integration to support dynamic property and availability updates.",
+        highlights: [
+            "Built CMS-connected content workflows for lodge, park and service updates",
+            "Enhanced usability and presentation for a premium tourism audience",
+            "Delivered a maintainable solution for stakeholder-driven updates",
+        ],
         tags: [
             { name: "Nunjucks", icon: "/skillicons/nj.png" },
             { name: "Koa", icon: "/skillicons/koa.png" },
@@ -93,9 +103,14 @@ export const projectsData = [
     },
     {
         title: "Fuelmate",
+        role: "Full Stack Developer",
         description:
-            "Full-featured website providing dynamic fuel card solutions for businesses. Features an advanced CMS, custom-built card filtering tools, live Jivo chat, JotForm integration, TrustPilot widgets and user-friendly animations. ",
-
+            "A business fuel card platform designed for lead generation, responsive conversion flows and integrated customer engagement tools.",
+        highlights: [
+            "Implemented dynamic card filtering and CMS-driven pricing",
+            "Integrated live chat, forms and TrustPilot widgets for better customer engagement",
+            "Maintained consistent branding with performance-aware interactions",
+        ],
         tags: [
             { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
             { name: "Javascript", icon: "/skillicons/js.png" },

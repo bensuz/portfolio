@@ -13,6 +13,8 @@ type ProjectsProbs = (typeof projectsData)[number];
 function Project({
     title,
     description,
+    role,
+    highlights,
     tags,
     imageUrl,
     src,
@@ -40,10 +42,25 @@ function Project({
             {" "}
             <section className="relative  bg-slate-200/40 max-w-[58rem] border border-gray-500/5 rounded-lg overflow-hidden sm:pr-8 sm:h-[24rem] shadow-md shadow-slate-500 hover:bg-purple-100/50 group-even/card:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-gray-700">
                 <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 max-sm:min-w-full max-md:border max-md:mr-8 sm:max-w-[50%] max-sm:max-w-[50%] flex flex-col justify-start items-start h-full sm:mt-auto sm:group-even/card:ml-[27rem] sm:group-even/card:w-full sm:group-even/card:px-0">
+                    {role && (
+                        <p className="mb-2 text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+                            {role}
+                        </p>
+                    )}
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="mt-2 leading-relaxed text-slate-800 dark:text-white/80">
                         {description}
                     </p>
+                    {highlights?.length ? (
+                        <ul className="mt-4 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                            {highlights.map((highlight, index) => (
+                                <li key={index} className="flex items-start gap-3">
+                                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#7756b3]" />
+                                    <span>{highlight}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : null}
                     <ul className="flex flex-wrap mt-4 gap-2">
                         {tags.map((tag, index) => (
                             <li

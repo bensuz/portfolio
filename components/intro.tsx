@@ -52,19 +52,19 @@ const Intro = () => {
                 </div>
             </div>
             <motion.h1
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-slate-700 dark:text-white/80"
+                className="mb-6 mt-4 px-4 text-2xl font-medium !leading-[1.4] sm:text-4xl text-slate-700 dark:text-white/80"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                Hey, I'm Bensu.
+                Full-Stack Web Developer specialising in secure, accessible digital services.
             </motion.h1>
 
             <motion.p
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="pb-10 text-xl dark:text-white/80"
+                className="pb-10 text-lg sm:text-xl dark:text-white/80 max-w-2xl mx-auto"
             >
-                A Full-Stack Web Developer.
+                Experienced in delivering production web platforms for enterprise and regulated environments, with a strong focus on compliance, maintainability and stakeholder collaboration.
             </motion.p>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
