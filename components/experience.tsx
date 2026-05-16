@@ -57,7 +57,12 @@ export default function Experience() {
                             </h3>
                             <p className="font-normal !mt-0">{item.location}</p>
                             <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                                {item.description}
+                                {item.description.split(/<\/?br\s*\/?>/gi).map((text, index, array) => (
+                                    <React.Fragment key={index}>
+                                        {text}
+                                        {index < array.length - 1 && <br />}
+                                    </React.Fragment>
+                                ))}
                             </p>
                         </VerticalTimelineElement>
                     </React.Fragment>

@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import moviebox from "@/public/MovieBoxTrailer.png";
 import bryn from "@/public/bryn-morfydd.png";
 import fuelmate from "@/public/fuelmate-narrow.png";
+import victoryConversions from "@/public/conversions.png"; 
 
 export const links = [
     {
@@ -36,18 +37,16 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated from bootcamp",
+        title: "Graduated from coding school",
         location: "WBS Coding School",
-        description:
-            "I graduated from bootcamp after 6 months of study, with a strong foundation in both front-end and back-end development.",
+        description: "Completed an intensive 6-month full-stack web development programme, building a strong foundation in front-end development, back-end development, databases, REST APIs, Git workflows and project-based software delivery.",
         icon: React.createElement(LuGraduationCap),
         date: "Sept 2023",
     },
     {
-        title: "Junior Full Stack Developer",
+        title: "Full Stack Developer",
         location: "Rix Digital - J.R Rix & Sons",
-        description:
-            "I'm working as a full stack developer at Rix Digital. Responsible for developing various Webflow, React/Node, Remix projects for the internal and external steakholders as well as maintaining/updating the existing websites.",
+        description:"Working as a full-stack developer across a diverse range of production websites and internal digital projects for multiple Rix Group brands. </br></br>I work with a varied tech stack including Webflow, Node.js/Koa, React, Remix, SvelteKit, Nunjucks, Alpine.js,and JavaScript/TypeScript. </br></br>My role includes building responsive user interfaces, reusable components, backend routes, secure form workflows, API integration planning, analytics tracking, SEO improvements, performance optimisation, accessibility improvements and ongoing support for live services. </br></br>I collaborate with marketing, IT and business stakeholders to turn requirements into maintainable digital products.",
         icon: React.createElement(CgWorkAlt),
         date: "Dec 2023 - Present",
     },
@@ -55,26 +54,22 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "Fuelmate",
+        title: "Victory Conversions", // new
         description:
-            "Full-featured website providing dynamic fuel card solutions for businesses. Features an advanced CMS, custom-built card filtering tools, live Jivo chat, JotForm integration, TrustPilot widgets and user-friendly animations. ",
-
-        tags: [
-            { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
-            { name: "Javascript", icon: "/skillicons/js.png" },
-            { name: "CSS", icon: "/skillicons/css.png" },
+            // new
+            "A production website for a public-sector and commercial vehicle conversion company, focused on reusable templates, responsive layouts, accessibility, SEO, performance and clear contact journeys.",
+            tags: [
+            { name: "Nunjucks", icon: "/skillicons/nj.png" },
+            { name: "Koa", icon: "/skillicons/koa.png" },
+            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
+            { name: "Alpine.js", icon: "/skillicons/alpine.png" },
+            { name: "JavaScript", icon: "/skillicons/js.png" },
             { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
-            {
-                name: "Trustpilot Widget",
-                icon: "/skillicons/trustpilot_logo.png",
-            },
-            { name: "JivoChat", icon: "/skillicons/jivo.png" },
             { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
         ],
-
-        imageUrl: fuelmate,
+        imageUrl: victoryConversions,
         src: "",
-        live: "https://www.fuelmate.co.uk/",
+        live: "https://www.victoryconversions.com/",
         preview: "",
     },
     {
@@ -87,6 +82,9 @@ export const projectsData = [
             { name: "Koa", icon: "/skillicons/koa.png" },
             { name: "Tailwind", icon: "/skillicons/tailwind.png" },
             { name: "Alpine.js", icon: "/skillicons/alpine.png" },
+            { name: "JavaScript", icon: "/skillicons/js.png" },
+            { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
+            { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
         ],
         imageUrl: bryn,
         src: "",
@@ -94,23 +92,29 @@ export const projectsData = [
         preview: "",
     },
     {
-        title: "MovieBox",
+        title: "Fuelmate",
         description:
-            "MovieBox is a full CRUD web application that allows users to discover popular movies and watch trailers, search and filter the movies by keywords, and manage their favorite movies by creating a list.",
+            "Full-featured website providing dynamic fuel card solutions for businesses. Features an advanced CMS, custom-built card filtering tools, live Jivo chat, JotForm integration, TrustPilot widgets and user-friendly animations. ",
+
         tags: [
-            { name: "PostgreSQL", icon: "/skillicons/postgresql.png" },
-            { name: "Express", icon: "/skillicons/expressjs.png" },
-            { name: "React", icon: "/skillicons/react.png" },
-            { name: "Node.js", icon: "/skillicons/nodejs.png" },
-            { name: "JavaScript", icon: "/skillicons/js.png" },
-            { name: "Tailwind", icon: "/skillicons/tailwind.png" },
-            { name: "REST APIs", icon: "/skillicons/restapi.png" },
+            { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
+            { name: "Javascript", icon: "/skillicons/js.png" },
+            { name: "CSS", icon: "/skillicons/css.png" },
+            { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
+            {
+                name: "Trustpilot Widget",
+                icon: "/skillicons/Trustpilot_logo.png",
+            },
+            { name: "JivoChat", icon: "/skillicons/jivo.png" },
+            { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
         ],
-        imageUrl: moviebox,
-        src: "https://github.com/bensuz/MovieBox",
-        live: "https://moviebox-0lid.onrender.com/",
-        preview: "https://www.youtube.com/watch?v=ZKFUGMUu_Hc",
-    },
+
+        imageUrl: fuelmate,
+        src: "",
+        live: "https://www.fuelmate.co.uk/",
+        preview: "",
+    }
+    
 ] as const;
 
 export const skillsData = [
@@ -122,15 +126,27 @@ export const skillsData = [
     { name: "Next.js", icon: "/skillicons/nextjs.png" },
     { name: "Node.js", icon: "/skillicons/nodejs.png" },
     { name: "Express", icon: "/skillicons/expressjs.png" },
+    { name: "Koa", icon: "/skillicons/koa.png" }, 
+    { name: "Nunjucks", icon: "/skillicons/nj.png" }, 
+    { name: "Alpine.js", icon: "/skillicons/alpine.png" }, 
     { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
     { name: "Tailwind", icon: "/skillicons/tailwind.png" },
     { name: "Bootstrap", icon: "/skillicons/bootstrap.png" },
     { name: "MongoDB", icon: "/skillicons/mongodb.png" },
     { name: "PostgreSQL", icon: "/skillicons/postgresql.png" },
-    { name: "Framer Motion", icon: "/skillicons/framer.png" },
-    { name: "Git", icon: "/skillicons/git.png" },
-    { name: "Github", icon: "/skillicons/github.png" },
-    { name: "Postman", icon: "/skillicons/postman.png" },
-    { name: "Figma", icon: "/skillicons/figma.png" },
+    { name: "Supabase", icon: "/skillicons/supabase.webp" }, 
+    { name: "REST APIs", icon: "/skillicons/restapi.png" }, 
+    { name: "Zod", icon: "/skillicons/zod.webp" }, 
+    { name: "Playwright", icon: "/skillicons/playwright.webp" }, 
     { name: "Jest", icon: "/skillicons/jest.png" },
+    { name: "Git", icon: "/skillicons/git.png" },
+    { name: "GitHub", icon: "/skillicons/github.png" }, 
+    { name: "Postman", icon: "/skillicons/postman.png" },
+    { name: "Docker", icon: "/skillicons/docker.png" }, 
+    { name: "Figma", icon: "/skillicons/figma.png" },
+    { name: "Cloudflare Turnstile", icon: "/skillicons/cloudflare.png" }, 
+    { name: "Postmark", icon: "/skillicons/postmark.png" }, 
+    { name: "Google Tag Manager", icon: "/skillicons/gtm.png" }, 
+    { name: "Cookiebot", icon: "/skillicons/cookiebot.png" }, 
+    { name: "Accessibility", icon: "/skillicons/accessibility.jpg" }, 
 ] as const;

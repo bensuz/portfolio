@@ -64,9 +64,7 @@ function Project({
                         ))}
                     </ul>
                     <div className="flex flex-wrap items-center justify-start lg:gap-3 mt-4">
-                        {title === "Fuelmate" ||
-                        title ===
-                            "Bryn Morfydd Lodge Park" ? null : hasSourceCode ? (
+                        {hasSourceCode && (
                             <Link
                                 href={src}
                                 target="_blank"
@@ -75,10 +73,7 @@ function Project({
                                 Source Code
                                 <BsArrowRight className="opacity-70 group-hover/button:translate-x-1 transition" />
                             </Link>
-                        ) : (
-                            <p className="text-[#7756b3] font-medium dark:text-[#b598ec]">
-                                Ongoing project, stay tuned for updates.
-                            </p>
+
                         )}
 
                         {hasLive && (
