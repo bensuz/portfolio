@@ -74,7 +74,7 @@ const Intro = () => {
                 <Link
                     href="#contact"
                     title="contact"
-                    className="group bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] hover:text-white active:scale-105 transition"
+                    className="group bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-700 dark:hover:shadow-slate-600 dark:hover:bg-[#2e2443] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d] hover:text-white active:scale-105 transition"
                     onClick={() => {
                         setActiveSection("Contact");
                         setTimeOfLastClick(Date.now());
@@ -87,21 +87,21 @@ const Intro = () => {
                     href="/Elif_Bensu_Zorlu_CV.pdf"
                     download
                     title="CV"
-                    className="group bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443]  text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d]  active:scale-105 transition"
+                    className="group bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-700 dark:hover:shadow-slate-600 dark:hover:bg-[#2e2443]  text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#604a8d]  active:scale-105 transition"
                 >
                     Download CV{" "}
                     <HiDownload className="opacity-70 group-hover:translate-x-1 transition" />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/elif-bensu-zorlu/"
-                    className="bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] p-4 text-white hover:text-white hover:bg-[#604a8d]  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer "
+                    className="bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-700 dark:hover:shadow-slate-600 dark:hover:bg-[#2e2443] p-4 text-white hover:text-white hover:bg-[#604a8d]  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer "
                     target="_blank"
                 >
                     <BsLinkedin className="text-xl" />
                 </a>
                 <a
                     href="https://github.com/bensuz"
-                    className="bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-600 dark:hover:bg-[#2e2443] p-[0.9rem] text-white hover:text-white hover:bg-[#604a8d]   flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  "
+                    className="bg-[#7756b3] dark:bg-[#412f63] dark:shadow-md dark:shadow-slate-700 dark:hover:shadow-slate-600 dark:hover:bg-[#2e2443] p-[0.9rem] text-white hover:text-white hover:bg-[#604a8d]   flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  "
                     target="_blank"
                 >
                     <FaGithubSquare className="text-2xl" />

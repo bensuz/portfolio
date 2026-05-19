@@ -34,7 +34,7 @@ function Project({
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 1", "1.33 1"],
+        offset: ["0 1", "1.10 1"],
     });
 
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
@@ -63,7 +63,7 @@ function Project({
                         <ul className="mt-4 space-y-2 text-sm text-slate-700 dark:text-slate-300">
                             {highlights.map((highlight, index) => (
                                 <li key={index} className="flex items-start gap-3">
-                                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#7756b3]" />
+                                    <span className="mt-2 min-h-[8px] max-h-[8px] min-w-[4px] max-w-[4px] rounded-full bg-[#7756b3]" />
                                     <span>{highlight}</span>
                                 </li>
                             ))}
