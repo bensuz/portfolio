@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import moviebox from "@/public/MovieBoxTrailer.png";
 import bryn from "@/public/bryn-morfydd.png";
-import fuelmate from "@/public/fuelmate-narrow.png";
+import fuelmate from "@/public/fuelmate.png";
 import victoryConversions from "@/public/conversions.png"; 
 
 export const links = [
@@ -57,11 +57,11 @@ export const projectsData = [
         title: "Victory Conversions",
         role: "Full Stack Developer",
         description:
-            "A public-sector and commercial vehicle conversion website rebuilt for reusable service templates, accessible content and performance-optimised pages.",
+            "A production website for a specialist vehicle conversion company serving public-sector and commercial clients, focused on maintainable architecture, accessible user journeys, performance and reliable delivery.",
         highlights: [
-            "Delivered reusable templates for service and sector pages",
-            "Improved accessibility, SEO and cross-device performance",
-            "Built clear contact journeys to support stakeholder-led lead generation",
+            "Built a maintainable component-based structure to support consistent layouts and future updates",
+            "Improved user journeys with clear navigation, accessible content and responsive interfaces",
+            "Applied SEO, performance and analytics considerations to support visibility and measurable outcomes",
         ],
         tags: [
             { name: "Nunjucks", icon: "/skillicons/nj.png" },
@@ -70,7 +70,7 @@ export const projectsData = [
             { name: "Alpine.js", icon: "/skillicons/alpine.png" },
             { name: "JavaScript", icon: "/skillicons/js.png" },
             { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
-            { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
+            { name: "GA & GTM", icon: "/skillicons/gtm.png" },
         ],
         imageUrl: victoryConversions,
         src: "",
@@ -78,14 +78,41 @@ export const projectsData = [
         preview: "",
     },
     {
-        title: "Bryn Morfydd Lodge Park",
-        role: "Full-stack developer",
+        title: "Fuelmate",
+        role: "Full Stack Developer",
         description:
-            "A luxury lodge park website with a custom park management integration to support dynamic property and availability updates.",
+            "A production business platform for fuel card solutions, focused on lead generation, dynamic content, third-party integrations, analytics and ongoing service support.",
         highlights: [
-            "Built CMS-connected content workflows for lodge, park and service updates",
-            "Enhanced usability and presentation for a premium tourism audience",
-            "Delivered a maintainable solution for stakeholder-driven updates",
+            "Implemented interactive features with custom code and integrations to improve user engagement and conversion journeys",
+            "Applied consent, analytics and tracking tools to support privacy-aware marketing insight",
+            "Maintained responsive, brand-consistent interfaces with performance and usability in mind",
+        ],
+        tags: [
+            { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
+            { name: "JavaScript", icon: "/skillicons/js.png" },
+            { name: "CSS", icon: "/skillicons/css.png" },
+            { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
+            {
+                name: "Trustpilot Widget",
+                icon: "/skillicons/Trustpilot_logo.png",
+            },
+            { name: "JivoChat", icon: "/skillicons/jivo.png" },
+            { name: "GA & GTM", icon: "/skillicons/gtm.png" },
+        ],
+        imageUrl: fuelmate,
+        src: "",
+        live: "https://www.fuelmate.co.uk/",
+        preview: "",
+    },
+    {
+        title: "Bryn Morfydd Lodge Park",
+        role: "Full Stack Developer",
+        description:
+            "A responsive, data-driven website for a luxury lodge park, focused on reusable architecture, structured content, maintainability, performance and stakeholder-managed updates.",
+        highlights: [
+            "Created reusable components and structured content patterns to reduce repetition and improve maintainability",
+            "Built custom CMS platform for admins to manage content and future updates with ease",
+            "Built responsive interfaces with accessibility, SEO and image performance considerations",
         ],
         tags: [
             { name: "Nunjucks", icon: "/skillicons/nj.png" },
@@ -94,42 +121,13 @@ export const projectsData = [
             { name: "Alpine.js", icon: "/skillicons/alpine.png" },
             { name: "JavaScript", icon: "/skillicons/js.png" },
             { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
-            { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
+            { name: "GA & GTM", icon: "/skillicons/gtm.png" },
         ],
         imageUrl: bryn,
         src: "",
         live: "https://brynmorfydd.com/",
         preview: "",
-    },
-    {
-        title: "Fuelmate",
-        role: "Full Stack Developer",
-        description:
-            "A business fuel card platform designed for lead generation, responsive conversion flows and integrated customer engagement tools.",
-        highlights: [
-            "Implemented dynamic card filtering and CMS-driven pricing",
-            "Integrated live chat, forms and TrustPilot widgets for better customer engagement",
-            "Maintained consistent branding with performance-aware interactions",
-        ],
-        tags: [
-            { name: "Webflow", icon: "/skillicons/webflow-square-small.png" },
-            { name: "Javascript", icon: "/skillicons/js.png" },
-            { name: "CSS", icon: "/skillicons/css.png" },
-            { name: "Cookiebot", icon: "/skillicons/cookiebot.png" },
-            {
-                name: "Trustpilot Widget",
-                icon: "/skillicons/Trustpilot_logo.png",
-            },
-            { name: "JivoChat", icon: "/skillicons/jivo.png" },
-            { name: "GA & GTM ", icon: "/skillicons/gtm.png" },
-        ],
-
-        imageUrl: fuelmate,
-        src: "",
-        live: "https://www.fuelmate.co.uk/",
-        preview: "",
     }
-    
 ] as const;
 
 export const skillsData = [
@@ -159,9 +157,9 @@ export const skillsData = [
     { name: "Postman", icon: "/skillicons/postman.png" },
     { name: "Docker", icon: "/skillicons/docker.png" }, 
     { name: "Figma", icon: "/skillicons/figma.png" },
-    { name: "Cloudflare Turnstile", icon: "/skillicons/cloudflare.png" }, 
+    { name: "Turnstile", icon: "/skillicons/cloudflare.webp" }, 
     { name: "Postmark", icon: "/skillicons/postmark.png" }, 
-    { name: "Google Tag Manager", icon: "/skillicons/gtm.png" }, 
+    { name: "GTM", icon: "/skillicons/gtm.png" }, 
     { name: "Cookiebot", icon: "/skillicons/cookiebot.png" }, 
     { name: "Accessibility", icon: "/skillicons/accessibility.jpg" }, 
 ] as const;

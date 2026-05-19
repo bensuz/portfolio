@@ -59,19 +59,8 @@ const About = () => {
                 building secure, accessible and maintainable digital services that
                 meet real business needs.
             </p>
-
-            <div className="mb-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-950/40">
-                <h3 className="mb-3 text-lg font-semibold">Government-ready strengths</h3>
-                <ul className="list-disc list-inside space-y-2 text-[1rem] leading-7 text-slate-700 dark:text-slate-200">
-                    <li>Delivering secure form workflows and compliant digital services</li>
-                    <li>Improving accessibility, performance and maintainability for live systems</li>
-                    <li>Collaborating with stakeholders on requirements, governance and documentation</li>
-                    <li>Applying disciplined development practices in regulated and production environments</li>
-                </ul>
-            </div>
-
             <p className="mb-4">
-                I also use AI-assisted development tools responsibly to support
+                I also use <span className="font-semibold text-[1.06rem]">AI-assisted development tools</span> such as Codex and Claude Code responsibly to support
                 code exploration, debugging, refactoring, documentation and review,
                 while retaining ownership of technical decisions, quality and
                 delivery.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -22,6 +22,16 @@ function Project({
     preview,
 }: ProjectsProbs) {
     const ref = useRef<HTMLDivElement>(null);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const query = window.matchMedia("(min-width: 640px)");
+        const handleChange = () => setIsDesktop(query.matches);
+        handleChange();
+        query.addEventListener("change", handleChange);
+        return () => query.removeEventListener("change", handleChange);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["0 1", "1.33 1"],
@@ -33,20 +43,18 @@ function Project({
     const hasSourceCode = !!src;
     const hasLive = !!live;
     const hasPreview = !!preview;
+    const wrapperStyle = isDesktop
+        ? { scale: scaleProgress, opacity: opacityProgess }
+        : undefined;
+
     return (
         <motion.div
             ref={ref}
-            style={{ scale: scaleProgress, opacity: opacityProgess }}
-            className="group/card mb-3 sm:mb-8 last:mb-0"
+            style={wrapperStyle}
+            className="group/card mb-5 sm:mb-8 last:mb-0"
         >
-            {" "}
-            <section className="relative  bg-slate-200/40 max-w-[58rem] border border-gray-500/5 rounded-lg overflow-hidden sm:pr-8 sm:h-[24rem] shadow-md shadow-slate-500 hover:bg-purple-100/50 group-even/card:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-gray-700">
-                <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 max-sm:min-w-full max-md:border max-md:mr-8 sm:max-w-[50%] max-sm:max-w-[50%] flex flex-col justify-start items-start h-full sm:mt-auto sm:group-even/card:ml-[27rem] sm:group-even/card:w-full sm:group-even/card:px-0">
-                    {role && (
-                        <p className="mb-2 text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
-                            {role}
-                        </p>
-                    )}
+            <section className="relative w-full max-w-[58rem] mx-auto bg-slate-200/40 border border-gray-500/5 rounded-lg overflow-hidden shadow-sm shadow-slate-700 transition hover:bg-purple-100/50 dark:text-white dark:bg-white/10 dark:hover:bg-gray-700">
+                <div className="pt-6 pb-6 px-5 sm:pt-10 sm:px-10 w-full flex flex-col justify-start items-start gap-5 md:max-w-[48%] sm:group-even/card:ml-[27rem] sm:group-even/card:w-full sm:group-even/card:px-0">
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="mt-2 leading-relaxed text-slate-800 dark:text-white/80">
                         {description}
@@ -75,7 +83,7 @@ function Project({
                                     priority={true}
                                     width={100}
                                     height={100}
-                                    className="rounded-full h-[2.5rem] w-[2.5rem] dark:bg-white dark:p-1 mb-6 "
+                                    className="rounded-full h-[2.5rem] w-[2.5rem] dark:bg-white dark:p-1 mb-1 "
                                 />
                             </li>
                         ))}
@@ -119,13 +127,13 @@ function Project({
                     src={imageUrl}
                     alt={title}
                     quality={95}
-                    className="absolute top-4 lg:-right-16 md:-right-20 sm:-right-24 max-sm:-right-64 lg:w-[28.25rem] sm:w-[25.25rem] max-sm:h-[36.25rem] max-sm:w-auto rounded-t-lg shadow-2xl transition group-hover/card/card:scale-[1.04] group-hover/card:-translate-x-3 group-hover/card:translate-y-3 group-hover/card:-rotate-2 group-even/card:right-[initial] group-even/card:-left-16 group-even/card:group-hover/card:translate-x-3  group-even/card:group-hover/card:-translate-y-3  group-even/card:group-hover/card:rotate-2 max-sm:hidden"
+                    className="absolute top-4 lg:-right-16 md:-right-20 sm:-right-24 right-0 lg:w-[28.25rem]  sm:w-[25.25rem] w-[90%] max-w-[28.25rem] rounded-t-lg shadow-2xl transition-transform duration-200 ease-out transform-gpu max-md:hidden group-hover/card:-rotate-3 group-hover/card:translate-x-2 group-hover/card:-translate-y-2 group-even/card:right-[initial] group-even/card:-left-16 group-even/card:group-hover/card:rotate-3 group-even/card:group-hover/card:-translate-x-2 group-even/card:group-hover/card:translate-y-2"
                 />
                 <Image
                     src={imageUrl}
                     alt={title}
                     quality={95}
-                    className=" sm:hidden"
+                    className="w-full h-56 rounded-t-lg object-cover object-left-top md:hidden"
                 />
             </section>
         </motion.div>
