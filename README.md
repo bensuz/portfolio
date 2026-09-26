@@ -49,9 +49,6 @@ so there is one place to update.
 
 The home page regenerates daily so the live experience counter stays accurate.
 
-The hero shape is set by `HERO_VARIANT` in `components/scene/hero-shape.ts`: `"page"` (an
-exploded web page, like the 3D layers view in dev tools) or `"git"` (a commit graph).
-
 ## Contact form
 
 Copy `.env.example` to `.env.local` and set `RESEND_API_KEY` (and optionally

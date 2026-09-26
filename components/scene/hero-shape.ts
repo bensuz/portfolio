@@ -1,13 +1,6 @@
-// Hero shapes, built from simple primitives. Each primitive gets particles in proportion
-// to its weight, so outlines stay crisp and filled areas read as soft surfaces.
-//
-// - "page": an "exploded" web page, like the 3D layers view in browser dev tools.
-// - "git":  a commit graph. Feature branches split off main, commit and merge back.
-
-export type HeroVariant = "git" | "page";
-
-// Which shape the hero shows. Switch to "git" for the commit graph.
-export const HERO_VARIANT: HeroVariant = "page";
+// The hero shape: an "exploded" web page, like the 3D layers view in browser dev tools.
+// It is built from simple primitives. Each primitive gets particles in proportion to its
+// weight, so outlines stay crisp and filled areas read as soft surfaces.
 
 type Vec3 = [number, number, number];
 type Primitive = { weight: number; tone: number; sample: () => Vec3 };
@@ -106,101 +99,6 @@ function stroke(points: [number, number][], z: number, width: number, tone: numb
   };
 }
 
-// A smooth path through 3D space, sampled with a little thickness so it reads as a glowing tube.
-function curve(at: (u: number) => Vec3, tone: number, density: number, width = 0.02): Primitive {
-  let length = 0;
-  for (let i = 0; i < 32; i++) {
-    const [ax, ay, az] = at(i / 32);
-    const [bx, by, bz] = at((i + 1) / 32);
-    length += Math.hypot(bx - ax, by - ay, bz - az);
-  }
-  return {
-    weight: length * density,
-    tone,
-    sample: () => {
-      const [x, y, z] = at(Math.random());
-      return [x, y + rand(-width, width) / 2, z + rand(-width, width) / 2];
-    },
-  };
-}
-
-function ring(cx: number, cy: number, z: number, r: number, tone: number, density: number): Primitive {
-  return {
-    weight: 2 * Math.PI * r * density,
-    tone,
-    sample: () => {
-      const a = Math.random() * Math.PI * 2;
-      return [cx + Math.cos(a) * r, cy + Math.sin(a) * r, z];
-    },
-  };
-}
-
-function gitGraph(): Primitive[] {
-  // Each lane has a height and a depth, so the branches separate as the graph turns.
-  // Lane heights are shifted up by 0.36 so the four lanes are centred on the origin.
-  const lanes = { feature: [1.08, -0.4], main: [0.36, 0], fix: [-0.36, 0.4], long: [-1.08, 0.8] } as const;
-  type Lane = keyof typeof lanes;
-  const ease = (u: number) => u * u * (3 - 2 * u);
-  const straight = (x0: number, x1: number, lane: Lane, tone: number) => {
-    const [y, z] = lanes[lane];
-    return curve((u) => [x0 + (x1 - x0) * u, y, z], tone, 1);
-  };
-  const bend = (x0: number, x1: number, from: Lane, to: Lane, tone: number) => {
-    const [y0, z0] = lanes[from];
-    const [y1, z1] = lanes[to];
-    return curve((u) => [x0 + (x1 - x0) * u, y0 + (y1 - y0) * ease(u), z0 + (z1 - z0) * ease(u)], tone, 1);
-  };
-  const commit = (x: number, lane: Lane, tone: number, r = 0.075) => {
-    const [y, z] = lanes[lane];
-    return [ring(x, y, z, r, tone, 1.25), disc(x, y, 0.034, z, TONE.glyph, 36)];
-  };
-  const MAIN = 1;
-  const FEATURE = 0.45;
-  const SECOND = 0.3;
-
-  return [
-    // main, ending at HEAD with a release tag
-    straight(-1.95, 1.9, "main", MAIN),
-    ...[-1.8, -1.35, -0.85, -0.4, 0.55].flatMap((x) => commit(x, "main", MAIN)),
-    ...[0.2, 1.05, 1.35, 1.62].flatMap((x) => commit(x, "main", MAIN, 0.095)),
-    ...commit(1.9, "main", TONE.accent, 0.11),
-    outline(1.9, 0.66, 0.5, 0.16, 0.08, 0, TONE.accent, 1.1),
-    block(1.9, 0.66, 0.26, 0.03, 0, TONE.accent, 40),
-
-    // feature branch: off main, two commits, merged back
-    bend(-1.35, -1.0, "main", "feature", FEATURE),
-    straight(-1.0, -0.2, "feature", FEATURE),
-    bend(-0.2, 0.2, "feature", "main", FEATURE),
-    ...[-0.85, -0.5].flatMap((x) => commit(x, "feature", FEATURE)),
-
-    // second branch below main
-    bend(-0.4, -0.05, "main", "fix", SECOND),
-    straight(-0.05, 0.75, "fix", SECOND),
-    bend(0.75, 1.05, "fix", "main", SECOND),
-    ...[0.1, 0.45].flatMap((x) => commit(x, "fix", SECOND)),
-
-    // a long-running branch on the deepest lane
-    // (it crosses two lanes, so its bends get twice the run to stay smooth)
-    bend(-1.8, -1.1, "main", "long", SECOND),
-    straight(-1.1, 0.95, "long", SECOND),
-    bend(0.95, 1.62, "long", "main", SECOND),
-    ...[-0.8, -0.15, 0.5].flatMap((x) => commit(x, "long", SECOND)),
-
-    // hotfix in the warm accent
-    bend(0.55, 0.85, "main", "feature", TONE.accent),
-    straight(0.85, 1.05, "feature", TONE.accent),
-    bend(1.05, 1.35, "feature", "main", TONE.accent),
-    ...commit(0.95, "feature", TONE.accent),
-
-    // faint dust around the graph for depth
-    {
-      weight: 5,
-      tone: TONE.glass,
-      sample: () => [rand(-2.1, 2.1), rand(-1.5, 1.5), rand(-0.9, 1.2)],
-    },
-  ];
-}
-
 function webPage(): Primitive[] {
   const W = 3.9;
   const H = 2.7;
@@ -273,11 +171,8 @@ function webPage(): Primitive[] {
   return parts;
 }
 
-// The scan highlight sweeps along this axis: across the graph, or down the page.
-export const SCAN_DIRECTION: Record<HeroVariant, Vec3> = { git: [1, 0, 0], page: [0, -1, 0] };
-
-export function buildHero(count: number, variant: HeroVariant = HERO_VARIANT) {
-  const parts = variant === "git" ? gitGraph() : webPage();
+export function buildHero(count: number) {
+  const parts = webPage();
   const total = parts.reduce((sum, part) => sum + part.weight, 0);
   const positions = new Float32Array(count * 3);
   const tones = new Float32Array(count);

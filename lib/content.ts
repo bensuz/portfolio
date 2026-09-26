@@ -29,7 +29,6 @@ export type Lighthouse = {
 export type Project = {
   slug: string;
   name: string;
-  kind: "client" | "personal";
   category: string;
   domain: string;
   url: string;
@@ -44,7 +43,6 @@ export type Project = {
   context: { label: string; value: string }[];
   sections: { title: string; text: string }[];
   tools: string[];
-  note?: string;
   // Lighthouse scores for the live site, from the better of the mobile and desktop runs.
   // Only added when every category is 90 or above.
   lighthouse?: Lighthouse;
@@ -57,7 +55,6 @@ export const projects: Project[] = [
   {
     slug: "fuelmate",
     name: "Fuelmate",
-    kind: "client",
     category: "Fuel & fleet",
     domain: "fuelmate.co.uk",
     url: "https://www.fuelmate.co.uk/",
@@ -111,7 +108,6 @@ export const projects: Project[] = [
   {
     slug: "bryn-morfydd",
     name: "Bryn Morfydd",
-    kind: "client",
     category: "Hospitality & property",
     domain: "brynmorfydd.com",
     url: "https://brynmorfydd.com/",
@@ -162,7 +158,6 @@ export const projects: Project[] = [
   {
     slug: "victory",
     name: "Victory Conversions",
-    kind: "client",
     category: "Specialist vehicles",
     domain: "victoryconversions.com",
     url: "https://www.victoryconversions.com/",
@@ -205,7 +200,6 @@ export const projects: Project[] = [
   {
     slug: "jordans",
     name: "Jordans Leisure",
-    kind: "client",
     category: "Leisure & automotive",
     domain: "jordansleisure.com",
     url: "https://www.jordansleisure.com/",
@@ -249,7 +243,6 @@ export const projects: Project[] = [
   {
     slug: "guidememaybe",
     name: "GuideMeMaybe",
-    kind: "personal",
     category: "Personal product · 2026",
     domain: "tour-guide-smoky.vercel.app",
     url: "https://tour-guide-smoky.vercel.app/en",

@@ -301,7 +301,7 @@ em {
   position: absolute;
   width: min(62vw, 720px);
   aspect-ratio: 1;
-  /* Centred on the right quarter of the 1440px content column, like the orb. */
+  /* Centred on the right quarter of the 1440px content column, behind the hero shape. */
   left: calc(50% + min(50vw, var(--max) / 2) * 0.5);
   translate: -50% 0;
   top: 10vh;

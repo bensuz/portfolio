@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const DURATION = 1400;
+
 // Renders the final value on the server; animates up to it once in view.
-export default function CountUp({ value, duration = 1400 }: { value: number; duration?: number }) {
+export default function CountUp({ value }: { value: number }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState(value);
 
@@ -18,7 +20,7 @@ export default function CountUp({ value, duration = 1400 }: { value: number; dur
       observer.disconnect();
       const start = performance.now();
       const step = (now: number) => {
-        const t = Math.min((now - start) / duration, 1);
+        const t = Math.min((now - start) / DURATION, 1);
         setDisplay(Math.round(value * (1 - Math.pow(1 - t, 4))));
         if (t < 1) frame = requestAnimationFrame(step);
       };
@@ -29,7 +31,7 @@ export default function CountUp({ value, duration = 1400 }: { value: number; dur
       observer.disconnect();
       cancelAnimationFrame(frame);
     };
-  }, [value, duration]);
+  }, [value]);
 
   return (
     <span ref={ref}>

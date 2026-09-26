@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { HERO_VARIANT, SCAN_DIRECTION, buildHero } from "./hero-shape";
+import { buildHero } from "./hero-shape";
 
 // One particle system that re-forms as the page scrolls:
 // 0 exploded web page (hero) → 1 drifting field (work) → 2 four stacked layers (stack) → 3 wave horizon (contact).
@@ -38,7 +38,6 @@ uniform vec3 uMouse;
 uniform float uMouseStrength;
 uniform vec3 uHeroOffset;
 uniform float uHeroScale;
-uniform vec3 uScanDir;
 uniform vec3 uStackOffset;
 uniform float uStackScale;
 uniform vec4 uLayerWeights;
@@ -93,8 +92,8 @@ void main(){
   float lw=aLayer<.5?uLayerWeights.x:aLayer<1.5?uLayerWeights.y:aLayer<2.5?uLayerWeights.z:uLayerWeights.w;
   float emphasis=mix(1.,mix(.85,1.6,lw),stackAmt);
   float heroAmt=clamp(1.-m,0.,1.);
-  // A soft pulse sweeps across the shape, like a CI run moving through the history.
-  float scan=smoothstep(.22,0.,abs(dot(position,uScanDir)-(mod(uTime*.45,4.8)-2.4)))*heroAmt;
+  // A soft scan line sweeps down the page, as if it were rendering.
+  float scan=smoothstep(.22,0.,abs(position.y+(mod(uTime*.45,4.8)-2.4)))*heroAmt;
   emphasis*=1.+scan*.45;
 
   gl_PointSize=uSize*(.55+aRandom*.9)*emphasis*uPixelRatio*(10./-mv.z);
@@ -252,7 +251,6 @@ export function createParticleField(canvas: HTMLCanvasElement, reducedMotion: bo
     uMouseStrength: { value: 0 },
     uHeroOffset: { value: new THREE.Vector3() },
     uHeroScale: { value: 1 },
-    uScanDir: { value: new THREE.Vector3(...SCAN_DIRECTION[HERO_VARIANT]) },
     uStackOffset: { value: new THREE.Vector3() },
     uStackScale: { value: 1 },
     uLayerWeights: { value: new THREE.Vector4(1, 0, 0, 0) },
