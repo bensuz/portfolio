@@ -171,11 +171,11 @@ export const projects: Project[] = [
     tint: "#7fa8ff",
     summary: "Specialist vehicle engineering, organised by the sectors it serves.",
     highlights: [
+      "Server-rendered with Koa and Nunjucks, Alpine.js on the front end",
       "Sector-led navigation for police, ambulance, fire and commercial",
-      "Alpine.js and Tailwind CSS front end",
-      "Product, contact and aftersales journeys side by side",
+      "Cookiebot consent with GA and Google Tag Manager",
     ],
-    tags: ["Alpine.js", "Tailwind", "Responsive"],
+    tags: ["Koa", "Nunjucks", "Alpine.js", "Tailwind"],
     headline: "Specialist vehicles. A focused digital presence.",
     overview:
       "A commercial website for a UK vehicle-conversion business serving emergency services and specialist commercial sectors, bringing a varied range of vehicles and engineering capabilities into one navigable experience.",
@@ -193,14 +193,14 @@ export const projects: Project[] = [
       },
       {
         title: "Showing the engineering",
-        text: "Vehicle imagery and sector-specific content present the conversion range, from response vehicles to specialist configurations.",
+        text: "Vehicle imagery and sector-specific content present the conversion range, from response vehicles to specialist configurations. Reusable Nunjucks components keep the layouts consistent and easy to extend.",
       },
       {
         title: "Supporting the next conversation",
         text: "Contact and aftersales routes sit alongside the product information, giving prospective and existing customers clear ways to reach the team.",
       },
     ],
-    tools: ["Alpine.js", "Tailwind CSS", "Responsive layouts", "Sector navigation"],
+    tools: ["Koa", "Nunjucks", "Alpine.js", "Tailwind CSS", "JavaScript", "Cookiebot", "GA & GTM"],
   },
   {
     slug: "jordans",
@@ -362,6 +362,9 @@ export const stackLayers = [
       "MongoDB",
       "Strapi",
       "Headless CMS",
+      "Zod",
+      "Postmark",
+      "Cloudflare Turnstile",
     ],
   },
   {
