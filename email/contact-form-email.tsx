@@ -1,46 +1,29 @@
-import React from "react";
-import {
-    Html,
-    Body,
-    Head,
-    Heading,
-    Hr,
-    Container,
-    Preview,
-    Section,
-    Text,
-    Tailwind,
-} from "@react-email/components";
-// import {  } from "@react-email/tailwind";
+import { Body, Container, Head, Heading, Hr, Html, Preview, Section, Text } from "@react-email/components";
 
 type ContactFormEmailProps = {
-    message: string;
-    senderEmail: string;
+  message: string;
+  senderEmail: string;
 };
 
-export default function ContactFormEmail({
-    message,
-    senderEmail,
-}: ContactFormEmailProps) {
-    return (
-        <Html>
-            <Head />
-            <Preview>New message from your portfolio site</Preview>
-            <Tailwind>
-                <Body className="bg-gray-100 text-black">
-                    <Container>
-                        <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-                            <Heading className="leading-tight">
-                                You received the following message from the
-                                contact form
-                            </Heading>
-                            <Text>{message}</Text>
-                            <Hr />
-                            <Text>The sender's email is: {senderEmail}</Text>
-                        </Section>
-                    </Container>
-                </Body>
-            </Tailwind>
-        </Html>
-    );
+export default function ContactFormEmail({ message, senderEmail }: ContactFormEmailProps) {
+  return (
+    <Html>
+      <Head />
+      <Preview>New message from your portfolio</Preview>
+      <Body style={{ backgroundColor: "#f3f1ec", color: "#111113", fontFamily: "Helvetica, Arial, sans-serif" }}>
+        <Container style={{ padding: "32px 0" }}>
+          <Section style={{ backgroundColor: "#ffffff", borderRadius: 12, padding: "24px 32px" }}>
+            <Heading as="h2" style={{ margin: "0 0 16px", fontSize: 20 }}>
+              New message from your portfolio
+            </Heading>
+            <Text style={{ fontSize: 15, lineHeight: "24px", whiteSpace: "pre-wrap" }}>{message}</Text>
+            <Hr style={{ borderColor: "#e5e2da" }} />
+            <Text style={{ fontSize: 14, color: "#55534e" }}>
+              Reply directly to this email to reach {senderEmail}.
+            </Text>
+          </Section>
+        </Container>
+      </Body>
+    </Html>
+  );
 }

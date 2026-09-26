@@ -1,15 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // Pin the workspace root; a stray lockfile higher up would otherwise be picked up.
+    turbopack: { root: __dirname },
     images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "images.unsplash.com",
-            },
-        ],
-    },
-    experimental: {
-        serverActions: true,
+        formats: ["image/avif", "image/webp"],
     },
 };
 
