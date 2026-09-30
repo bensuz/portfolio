@@ -16,9 +16,9 @@ export default function Work() {
                     Shipped for <em>real businesses.</em>
                 </h2>
                 <p className="section-intro">
-                    Production websites I built at Rix Digital, plus an
-                    individual product. Each has a short case study on the
-                    problem, the stack and how I built it.
+                    Production websites I built at Rix Digital. Each has a
+                    short case study on the problem, the stack and how I
+                    built it.
                 </p>
             </header>
 
